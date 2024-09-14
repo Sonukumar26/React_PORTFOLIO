@@ -169,22 +169,22 @@ const Navbar = () => {
           <FaBars />
         </MobileIcon>
         <NavItems>
-          <NavLink to="about" smooth={true} duration={500}>About</NavLink>
-          <NavLink to="skills" smooth={true} duration={500}>Skills</NavLink>
-          <NavLink to="experience" smooth={true} duration={500}>Experience</NavLink>
-          <NavLink to="projects" smooth={true} duration={500}>Projects</NavLink>
-          <NavLink to="education" smooth={true} duration={500}>Education</NavLink>
+          <NavLink to="about" smooth={true} duration={250}>About</NavLink>
+          <NavLink to="skills" smooth={true} duration={250}>Skills</NavLink>
+          <NavLink to="experience" smooth={true} duration={250}>Experience</NavLink>
+          <NavLink to="projects" smooth={true} duration={250}>Projects</NavLink>
+          <NavLink to="education" smooth={true} duration={250}>Education</NavLink>
         </NavItems>
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank">Github</GitHubButton>
         </ButtonContainer>
       </NavContainer>
       <MobileMenu open={open}>
-        <MobileMenuLinks to="about" smooth={true} duration={500} onClick={() => setOpen(false)}>About</MobileMenuLinks>
-        <MobileMenuLinks to="skills" smooth={true} duration={500} onClick={() => setOpen(false)}>Skills</MobileMenuLinks>
-        <MobileMenuLinks to="experience" smooth={true} duration={500} onClick={() => setOpen(false)}>Experience</MobileMenuLinks>
-        <MobileMenuLinks to="projects" smooth={true} duration={500} onClick={() => setOpen(false)}>Projects</MobileMenuLinks>
-        <MobileMenuLinks to="education" smooth={true} duration={500} onClick={() => setOpen(false)}>Education</MobileMenuLinks>
+        <MobileMenuLinks to="about" smooth={true} duration={250} onClick={() => setOpen(false)}>About</MobileMenuLinks>
+        <MobileMenuLinks to="skills" smooth={true} duration={250} onClick={() => setOpen(false)}>Skills</MobileMenuLinks>
+        <MobileMenuLinks to="experience" smooth={true} duration={250} onClick={() => setOpen(false)}>Experience</MobileMenuLinks>
+        <MobileMenuLinks to="projects" smooth={true} duration={250} onClick={() => setOpen(false)}>Projects</MobileMenuLinks>
+        <MobileMenuLinks to="education" smooth={true} duration={250} onClick={() => setOpen(false)}>Education</MobileMenuLinks>
         <GitHubButton style={{ padding: '10px 16px', background: theme.primary, color: 'white', width: 'max-content' }} href={Bio.github} target="_blank">Github</GitHubButton>
       </MobileMenu>
     </Nav>
