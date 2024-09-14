@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import {Bio} from '../../data/constants';
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/HeroImages.jpg";
-import HeroBgAnimation from '../HeroBgAnimation';
 
 const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
@@ -18,7 +17,6 @@ const HeroContainer = styled.div`
     padding: 32px 16px;
   }
   z-index: 1;
-
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
@@ -152,98 +150,86 @@ const SubTitle = styled.div`
 `;
 
 const ResumeButton = styled.a`
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    width: 95%;
-    max-width: 300px;
-    text-align: center;
-    padding: 16px 0;
-    color:${({ theme }) => theme.white};
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out !important;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    box-shadow:  20px 20px 60px #1F2634,
-    -20px -20px 60px #1F2634;
-    &:hover {
-        transform: scale(1.05);
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  width: 95%;
+  max-width: 300px;
+  text-align: center;
+  padding: 16px 0;
+  color: ${({ theme }) => theme.white};
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out !important;
+  background: hsla(271, 100%, 50%, 1);
+  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  box-shadow: 20px 20px 60px #1F2634, -20px -20px 60px #1F2634;
+  &:hover {
+    transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
     filter: brightness(1);
-    }    
-    
-    
-    @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
-    } 
+  }
 
+  @media (max-width: 640px) {
+    padding: 12px 0;
+    font-size: 18px;
+  }
 `;
 
 const Image = styled.img`
-width:100%;
-height:100%;
-position:relative;
-border-radius:50%;
-max-width:400px;
-max-height:500px;
-object-fit:cover;
-object-position:center;
-border:2px solid ${({theme})=>theme.primary};
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  max-width: 400px;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid ${({ theme }) => theme.primary};
 
- @media(max-width:768px){
-  max-width:400px;
-  max-height:400px;
- }
+  @media (max-width: 768px) {
+    max-width: 400px;
+    max-height: 400px;
+  }
 
- @media screen and (max-width:640px){
-  max-width:280px;
-  max-height:280px;
- }
-`
+  @media screen and (max-width: 640px) {
+    max-width: 280px;
+    max-height: 280px;
+  }
+`;
 
-
-
-const Hero=()=> {
-  return(
+const Hero = () => {
+  return (
     <div id="about">
-    <HeroContainer>
-       <HeroBg>
-        <HeroBgAnimation/>
-       </HeroBg>
-       <HeroInnerContainer>
+      <HeroContainer>
+        <HeroInnerContainer>
           <HeroLeftContainer>
-            <Title>Hi, I am <br/>{Bio.name}</Title>
+            <Title>Hi, I am <br />{Bio.name}</Title>
             <TextLoop>
-             I am a 
-             <Span>
-              <Typewriter
-              options={{
-                strings:Bio.roles,
-                autoStart:true,
-                loop:true,
-              }}
-              />
-             </Span>
+              I am a
+              <Span>
+                <Typewriter
+                  options={{
+                    strings: Bio.roles,
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </Span>
             </TextLoop>
             <SubTitle>{Bio.description}</SubTitle>
-            <ResumeButton href={Bio.resume} target="_blank">Check Resume</ResumeButton>
+            <ResumeButton href={Bio.resume} target="_blank">Resume</ResumeButton>
           </HeroLeftContainer>
           <HeroRightContainer>
-           <Image src={HeroImg} alt ="Hero"/>
+            <Image src={HeroImg} alt="Hero" />
           </HeroRightContainer>
-       </HeroInnerContainer>
-    </HeroContainer>
-    
+        </HeroInnerContainer>
+      </HeroContainer>
     </div>
-  )
+  );
 };
 
 export default Hero;

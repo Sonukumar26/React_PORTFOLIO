@@ -1,4 +1,3 @@
-// import { ToggleButton } from '@mui/material';
 import React,{useState} from 'react';
 import styled from 'styled-components';
 import {projects} from '../../data/constants';
@@ -119,18 +118,6 @@ const Projects =()=> {
    
    
        <ToggleGroup>
-       {toggle === 'all' ?
-       <ToggleButton active value="all" onClick={() => setToggle('all')}>All</ToggleButton>
-       :
-       <ToggleButton value="all" onClick={() => setToggle('all')}>All</ToggleButton>
-        }
-         <Divider/>
-         {toggle === 'FullStack Webapp' ?
-            <ToggleButton active value="FullStack Webapp" onClick={() => setToggle('FullStack Webapp')}>FullStack Webapp</ToggleButton>
-            :
-            <ToggleButton value="FullStack Webapp" onClick={() => setToggle('FullStack Webapp')}>FullStack Webapp</ToggleButton>
-          }
-         <Divider/>
          {toggle === 'FrontEnd Webapp' ?
             <ToggleButton active value="FrontEnd Webapp" onClick={() => setToggle('FrontEnd Webapp')}>FrontEnd Webapp</ToggleButton>
             :

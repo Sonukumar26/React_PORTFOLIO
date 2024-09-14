@@ -1,35 +1,33 @@
 import React, { useState } from 'react';
-import { Link as LinkR } from 'react-router-dom';
+import { Link } from 'react-scroll'; 
 import styled, { useTheme } from 'styled-components';
-import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
-// import { Close, CloseRounded } from '@mui/icons-material';
 
 const Nav = styled.div`
-    background-color: ${({theme}) => theme.card_light};
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    @media (max-width: 960px) {
-        transition: 0.8s all ease;
-    }
+  background-color: ${({ theme }) => theme.card_light};
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  @media (max-width: 960px) {
+    transition: 0.8s all ease;
+  }
 `;
 
-const NavLink = styled.a`
-    color: ${({ theme }) => theme.text_primary};
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    :hover {
-      color: ${({ theme }) => theme.primary};
-    }
+const NavLink = styled(Link)`
+  color: ${({ theme }) => theme.text_primary};
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  :hover {
+    color: ${({ theme }) => theme.primary};
+  }
 `;
 
 const NavContainer = styled.div`
@@ -43,40 +41,40 @@ const NavContainer = styled.div`
 `;
 
 const Span = styled.div`
- padding: 0 4px;
- font-weight:bold;
- font-size:18px;
+  padding: 0 4px;
+  font-weight: bold;
+  font-size: 18px;
 `;
 
-const NavLogo = styled(LinkR)`
-    width: 80%;    
-    padding: 0 6px;
-    display: flex;
-    justify-self: flex-start;
-    align-items: center;
-    text-decoration: none;
-    cursor:pointer;
-    @media screen and (max-width: 640px) {
-      padding: 0 0px;
+const NavLogo = styled(Link)`
+  width: 80%;
+  padding: 0 6px;
+  display: flex;
+  justify-self: flex-start;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  @media screen and (max-width: 640px) {
+    padding: 0 0px;
   }
 `;
 
 const NavItems = styled.ul`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    gap: 32px;
-    padding: 0 6px;
-    list-style: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 0 6px;
+  list-style: none;
 
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const GitHubButton = styled.a`
-background-color:transparent;
+  background-color: transparent;
   border: 1.8px solid ${({ theme }) => theme.primary};
   justify-content: center;
   display: flex;
@@ -90,17 +88,17 @@ background-color:transparent;
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.6s ease-in-out;
-    :hover {
-      background: ${({ theme }) => theme.primary};
-      color: ${({ theme }) => theme.white};     
-    }
-    @media screen and (max-width: 640px) { 
+  :hover {
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white};
+  }
+  @media screen and (max-width: 640px) {
     font-size: 0.8rem;
-    }
+  }
 `;
 
 const ButtonContainer = styled.div`
-  width: 80%;  
+  width: 80%;
   height: 100%;
   display: flex;
   justify-content: end;
@@ -126,25 +124,25 @@ const MobileIcon = styled.div`
 `;
 
 const MobileMenu = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 100%;
-    padding: 12px 40px 24px 40px;
-    background: ${({ theme }) => theme.card_light+99};
-    transition: all 0.3s ease-in-out;
-    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    opacity: ${({open }) => (open ? '1' : '0')};
-    z-index: ${({open }) => (open ? '1' : '-!')};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 100%;
+  padding: 12px 40px 24px 40px;
+  background: ${({ theme }) => theme.card_light + '99'};
+  transition: all 0.3s ease-in-out;
+  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  opacity: ${({ open }) => (open ? '1' : '0')};
+  z-index: ${({ open }) => (open ? '1' : '-1')};
 `;
 
-const MobileMenuLinks = styled(LinkR)`
+const MobileMenuLinks = styled(Link)`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
@@ -155,55 +153,40 @@ const MobileMenuLinks = styled(LinkR)`
   }
 `;
 
-
 const Navbar = () => {
-  const [open, setopen] = useState(false);
+  const [open, setOpen] = useState(false);
   const theme = useTheme();
+
   return (
     <Nav>
       <NavContainer>
-        <NavLogo to="/">
-          <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
-            <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
+        <NavLogo to="/home">
+          <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20px', cursor: 'pointer' }}>
+            <Span>Portfolio</Span>
           </a>
         </NavLogo>
-        <MobileIcon>
-          <FaBars onClick={() => {
-            setopen(!open);
-          }} />
+        <MobileIcon onClick={() => setOpen(!open)}>
+          <FaBars />
         </MobileIcon>
         <NavItems>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href='#skills'>Skills</NavLink>
-          <NavLink href='#experience'>Experience</NavLink>
-          <NavLink href='#projects'>Projects</NavLink>
-          <NavLink href='#education'>Education</NavLink>
+          <NavLink to="about" smooth={true} duration={500}>About</NavLink>
+          <NavLink to="skills" smooth={true} duration={500}>Skills</NavLink>
+          <NavLink to="experience" smooth={true} duration={500}>Experience</NavLink>
+          <NavLink to="projects" smooth={true} duration={500}>Projects</NavLink>
+          <NavLink to="education" smooth={true} duration={500}>Education</NavLink>
         </NavItems>
         <ButtonContainer>
-          <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
+          <GitHubButton href={Bio.github} target="_blank">Github</GitHubButton>
         </ButtonContainer>
       </NavContainer>
-        {
-          open &&(
-          <MobileMenu open={open}>
-            <MobileMenuLinks href="#about" onClick={() => {
-              setopen(!open)
-            }}>About</MobileMenuLinks>
-            <MobileMenuLinks href='#skills' onClick={() => {
-              setopen(!open)
-            }}>Skills</MobileMenuLinks>
-            <MobileMenuLinks href='#experience' onClick={() => {
-              setopen(!open)
-            }}>Experience</MobileMenuLinks>
-            <MobileMenuLinks href='#projects' onClick={() => {
-              setopen(!open)
-            }}>Projects</MobileMenuLinks>
-            <MobileMenuLinks href='#education' onClick={() => {
-              setopen(!open)
-            }}>Education</MobileMenuLinks>
-            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
-          </MobileMenu>
-        )}
+      <MobileMenu open={open}>
+        <MobileMenuLinks to="about" smooth={true} duration={500} onClick={() => setOpen(false)}>About</MobileMenuLinks>
+        <MobileMenuLinks to="skills" smooth={true} duration={500} onClick={() => setOpen(false)}>Skills</MobileMenuLinks>
+        <MobileMenuLinks to="experience" smooth={true} duration={500} onClick={() => setOpen(false)}>Experience</MobileMenuLinks>
+        <MobileMenuLinks to="projects" smooth={true} duration={500} onClick={() => setOpen(false)}>Projects</MobileMenuLinks>
+        <MobileMenuLinks to="education" smooth={true} duration={500} onClick={() => setOpen(false)}>Education</MobileMenuLinks>
+        <GitHubButton style={{ padding: '10px 16px', background: theme.primary, color: 'white', width: 'max-content' }} href={Bio.github} target="_blank">Github</GitHubButton>
+      </MobileMenu>
     </Nav>
   );
 };
