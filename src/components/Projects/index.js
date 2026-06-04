@@ -82,11 +82,6 @@ background: ${theme.primary + 20};
     border-radius: 4px;
 }
 `
-const Divider = styled.div`
-width: 1.5px;
-background: ${({ theme }) => theme.primary};
-`
-
 
 const CardContainer = styled.div`
 display: flex;

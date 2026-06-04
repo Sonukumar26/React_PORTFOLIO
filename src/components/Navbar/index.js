@@ -161,14 +161,12 @@ const Navbar = () => {
     <Nav>
       <NavContainer>
        <NavLogo to="about" smooth={true} duration={500}>
-            <a
+            <div
               style={{
                 display: "flex",
                 alignItems: "center",
-                color: "white",
-                marginBottom: "20px",
-                cursor: "pointer",
                 gap: "12px",
+                color: theme.text_primary,
               }}
             >
               <div
@@ -180,17 +178,15 @@ const Navbar = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "18px",
-                  fontWeight: "700",
                   color: "#fff",
-                  boxShadow: "0 4px 15px rgba(133, 76, 230, 0.4)",
+                  fontWeight: "700",
                 }}
               >
                 SK
               </div>
 
               <Span>Portfolio</Span>
-            </a>
+            </div>
           </NavLogo>
         <MobileIcon onClick={() => setOpen(!open)}>
           <FaBars />
