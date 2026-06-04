@@ -163,9 +163,9 @@ export const Bio = {
     },
     {
       id: 2,
-      img: "https://newgensoft.com/wp-content/uploads/2023/12/Newgen-Logo.png",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxklBoaUcEm5v845byBac3xWY1qONrwn7tcyOWdHRrFg&s",
       role: "Application Engineer (Intern)",
-      company: "NEWgen Software Private Limited",
+      company: "Newgen Software Private Limited",
       date: "Mar 2025 - Jun 2025",
       desc: "Worked as an Application Engineer at NEWgen Software, contributing to software development and application deployment. Collaborated with development teams to ensure quality and timely delivery of software solutions.",
       skills: [
@@ -181,7 +181,7 @@ export const Bio = {
       school: "Bhagwan Parshuram Institute of Technology, New Delhi",
       date: "Oct 2021 - Sep 2025",
       grade: "9 CGPA",
-      desc: "I am currently pursuing a Bachelor's degree in ELectrical and Electronics Engineering at Bhagwan Parshuram Institute of Technology,New Delhi. I have completed 6 semesters and have a CGPA of 9.03.",
+      desc: "I am currently pursuing a Bachelor's degree in ELectrical and Electronics Engineering at Bhagwan Parshuram Institute of Technology,New Delhi. I have completed 6 semesters and have a CGPA of 9.",
       degree: "Bachelor of Technology - B.Tech, Electrical and Electronics Engineering",
     },
     {
@@ -206,7 +206,7 @@ export const Bio = {
     {
       id: 1,
       title: "Portfolio",
-      date: "Jan 2024 - Mar 2024",
+      date: "Jan 2024 - Jul 2024",
       description:
         "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=60",
@@ -218,7 +218,7 @@ export const Bio = {
     {
       id: 2,
       title: "Todo List Application",
-      date: "Jul 2024",
+      date: "Aug 2024 - Dec 2024",
       description:
         "A comprehensive Todo Web App made with React JS for task management. Features include task creation, editing, deletion, and marking tasks as complete. Built with a clean UI using modern CSS and React hooks for state management.",
       image:
@@ -231,7 +231,7 @@ export const Bio = {
     {
       id: 3,
       title: "Rankings - Unified Coding Profile & Progress Tracker",
-      date: "Sep 2023 - Jan 2024",
+      date: "Mar 2025 - Oct 2025",
       description:
         "Developed a full-stack web application that aggregates coding profiles from platforms such as LeetCode, CodeChef, GeeksforGeeks, and Codeforces into a unified dashboard. Implemented Google OAuth authentication, OTP-based user verification, coding statistics visualization, profile synchronization, and upcoming contest tracking. Collaborated as a Frontend Developer to build responsive user interfaces and enhance user experience using React and Redux.",
       image:
