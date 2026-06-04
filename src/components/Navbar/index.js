@@ -160,11 +160,38 @@ const Navbar = () => {
   return (
     <Nav>
       <NavContainer>
-        <NavLogo to="/home">
-          <a style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20px', cursor: 'pointer' }}>
-            <Span>Portfolio</Span>
-          </a>
-        </NavLogo>
+       <NavLogo to="about" smooth={true} duration={500}>
+            <a
+              style={{
+                display: "flex",
+                alignItems: "center",
+                color: "white",
+                marginBottom: "20px",
+                cursor: "pointer",
+                gap: "12px",
+              }}
+            >
+              <div
+                style={{
+                  width: "42px",
+                  height: "42px",
+                  borderRadius: "12px",
+                  background: "linear-gradient(135deg, #854CE6, #6A5AF9)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "18px",
+                  fontWeight: "700",
+                  color: "#fff",
+                  boxShadow: "0 4px 15px rgba(133, 76, 230, 0.4)",
+                }}
+              >
+                SK
+              </div>
+
+              <Span>Portfolio</Span>
+            </a>
+          </NavLogo>
         <MobileIcon onClick={() => setOpen(!open)}>
           <FaBars />
         </MobileIcon>
@@ -177,6 +204,13 @@ const Navbar = () => {
         </NavItems>
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank">Github</GitHubButton>
+           <GitHubButton
+              href={Bio.linkedin}
+              target="_blank"
+              style={{ marginLeft: "12px" }}
+            >
+              LinkedIn
+            </GitHubButton>
         </ButtonContainer>
       </NavContainer>
       <MobileMenu open={open}>
