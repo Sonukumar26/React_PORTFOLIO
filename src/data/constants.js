@@ -202,55 +202,56 @@ export const Bio = {
     },
   ];
   
-  export const projects = [
-    {
-      id: 1,
-      title: "Portfolio",
-      date: "Jan 2024 - Jul 2024",
-      description:
-        "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
-     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=60",
-      tags: ["Javascript","React.js"],
-      category: "",
-      github: "",
-      webapp: "",
-    },
-    {
-      id: 2,
-      title: "Todo List Application",
-      date: "Aug 2024 - Dec 2024",
-      description:
-        "A comprehensive Todo Web App made with React JS for task management. Features include task creation, editing, deletion, and marking tasks as complete. Built with a clean UI using modern CSS and React hooks for state management.",
-      image:
-        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-      tags: ["React.js","JavaScript","CSS"],
-      category: "web app",
-      github: "",
-      webapp: "",
-    },
-    {
-      id: 3,
-      title: "Rankings - Unified Coding Profile & Progress Tracker",
-      date: "Mar 2025 - Oct 2025",
-      description:
-        "Developed a full-stack web application that aggregates coding profiles from platforms such as LeetCode, CodeChef, GeeksforGeeks, and Codeforces into a unified dashboard. Implemented Google OAuth authentication, OTP-based user verification, coding statistics visualization, profile synchronization, and upcoming contest tracking. Collaborated as a Frontend Developer to build responsive user interfaces and enhance user experience using React and Redux.",
-      image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=60",
-      tags: [
-        "React.js",
-        "Redux",
-        "JavaScript",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
-        "Google OAuth",
-      ],
-      category: "web app",
-      github: "https://github.com/Rohit-Sharmaa/Rankings",
-      webapp: "https://rankingss.vercel.app/",
-    },
-  ];
-  
+export const projects = [
+      {
+        id: 1,
+        title: "Portfolio",
+        date: "Jan 2024 - Jul 2024",
+        description:
+          "Designed and developed a responsive personal portfolio website using React.js to showcase projects, skills, experience, and achievements. Implemented smooth scrolling navigation, reusable components, modern UI design, and optimized layouts for desktop and mobile devices.",
+        image:
+          "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=60",
+        tags: ["JavaScript", "React.js", "CSS", "Styled Components"],
+        category: "web app",
+        github: "https://github.com/Sonukumar26",
+        webapp: "",
+      },
+
+      {
+        id: 2,
+        title: "Todo List Application",
+        date: "Aug 2024 - Dec 2024",
+        description:
+          "A comprehensive Todo Web App built using React.js for efficient task management. Features include task creation, editing, deletion, completion tracking, and responsive UI design. Implemented React Hooks for state management and component reusability.",
+        image:
+          "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=500&q=60",
+        tags: ["React.js", "JavaScript", "CSS"],
+        category: "web app",
+        github: "https://github.com/Sonukumar26/React_Todos-list",
+        webapp: "https://react-todos-list-six.vercel.app",
+      },
+
+      {
+        id: 3,
+        title: "Rankings - Unified Coding Profile & Progress Tracker",
+        date: "Mar 2025 - Oct 2025",
+        description:
+          "Developed a full-stack platform that aggregates coding profiles from LeetCode, CodeChef, GeeksforGeeks, and Codeforces into a unified dashboard. Implemented profile synchronization, coding analytics, Google OAuth authentication, OTP verification, and upcoming contest tracking. Contributed as a Frontend Developer using React and Redux.",
+        image:
+          "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=60",
+        tags: [
+          "React.js",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "Google OAuth",
+        ],
+        category: "web app",
+        github: "https://github.com/Rohit-Sharmaa/Rankings",
+        webapp: "https://rankingss.vercel.app/",
+      },
+    ];
+      
   export const TimeLineData = [
     { year: 2021, text: "Started my journey" },
     { year: 2022, text: "Pursuing to become Web Developer" },
